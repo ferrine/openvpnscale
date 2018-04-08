@@ -10,6 +10,7 @@ services:
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
+      - open_vpn_data:/etc/openvpn
     ports:
       - "8000:8000"
     depends_on:
@@ -17,3 +18,4 @@ services:
 
 volumes:
   postgres_data:
+  open_vpn_data:
