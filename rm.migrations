@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Removing migrations is dangerous for production server. Are you sure to continue?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) rm -f $(find openvpnscale/users/migrations -name "[0-9]*") && rm -f $(find openvpnscale/vpn/migrations -name "[0-9]*"); break;;
+        No ) exit;;
+    esac
+done
+
+

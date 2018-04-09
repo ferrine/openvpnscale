@@ -1,4 +1,3 @@
-# openvpnscale
-Dockerized Django based Web GUI for OpenVPN
+# OpenVPN Dockerized manager
 
-Work in progress
+work in progress
